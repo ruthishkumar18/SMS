@@ -1,0 +1,93 @@
+I need to migrate my Django Student Management System from MySQL to Microsoft SQL Server (SSMS 2022). Please provide a complete migration solution.
+
+## Current Setup:
+- Backend: Django 5.0.1 with Django REST Framework
+- Current Database: MySQL 5.7+
+- Target Database: SQL Server 2022 (SSMS)
+- OS: Windows
+- Project Path: D:\FINAL_SMS
+
+## Migration Requirements:
+
+### 1. Database Schema Conversion
+Convert these MySQL tables to SQL Server compatible schema:
+- auth_user (custom user model with roles)
+- accounts_department
+- accounts_staff  
+- accounts_student
+- django_admin_log
+- django_content_type
+- django_migrations
+- django_session
+
+### 2. Django Settings Update
+Provide the complete `settings.py` configuration for SQL Server using `mssql-django` or `pyodbc`.
+
+### 3. Migration Steps
+Provide step-by-step commands to:
+- Install required Python packages for SQL Server
+- Export data from MySQL
+- Transform schema for SQL Server compatibility
+- Import data to SQL Server
+- Run migrations without errors
+
+### 4. Data Type Mapping
+Create a mapping for these MySQL to SQL Server data types:
+- VARCHAR → NVARCHAR
+- DATETIME → DATETIME2
+- TEXT → NVARCHAR(MAX)
+- BOOLEAN → BIT
+- AUTO_INCREMENT → IDENTITY(1,1)
+- UNIQUE constraints
+- FOREIGN KEY constraints
+
+### 5. MSSQL Specific Fixes
+Provide solutions for:
+- Case-sensitive collation issues
+- Django ORM compatibility with MSSQL
+- Default value handling
+- String length limitations
+- JSON field support (if any)
+
+### 6. Connection String Format
+Provide the correct connection string format for:
+- Windows Authentication
+- SQL Server Authentication
+- LocalDB and full SQL Server
+
+### 7. Migration Script
+Generate a Python script that:
+- Reads existing MySQL data
+- Transforms schema for MSSQL
+- Migrates all data preserving relationships
+- Handles identity/auto-increment fields
+- Includes error handling and rollback capability
+
+### 8. Testing Script
+Provide a verification script to ensure:
+- All tables migrated correctly
+- Row counts match
+- Foreign key relationships intact
+- Sample queries work
+
+### 9. Rollback Plan
+Provide steps to revert to MySQL if needed.
+
+## Required Output Format:
+
+Please provide:
+1. **Complete settings.py configuration** for MSSQL
+2. **requirements.txt** with all MSSQL packages
+3. **Migration script** (Python) with full code
+4. **Step-by-step terminal commands** for execution
+5. **Troubleshooting guide** for common MSSQL issues
+6. **Performance optimization tips** for Django + MSSQL
+
+## Important Notes:
+- Preserve all existing data relationships
+- Maintain Django's ORM compatibility
+- Ensure JWT authentication still works
+- Keep all API endpoints unchanged
+- Maintain case-insensitive queries (critical for login)
+
+Please provide the complete solution with code, commands, and explanations.

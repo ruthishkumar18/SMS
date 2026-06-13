@@ -1,0 +1,135 @@
+/* Global Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dashboard Card Hover Effects */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Table Styles */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table th {
+  background-color: #343a40;
+  color: white;
+  border: none;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.05);
+  cursor: pointer;
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Pagination Styles */
+.pagination .page-link {
+  color: #007bff;
+  transition: all 0.2s;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+/* Navbar Styles */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Spinner */
+.spinner-border {
+  border-width: 0.2rem;
+}
+
+/* Profile Table */
+.profile-table {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 0.5em 1em;
+  font-weight: 500;
+}
+
+/* Alert Styles */
+.alert {
+  border-radius: 8px;
+  border: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .table td, .table th {
+    padding: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation for notifications */
+.Toastify__toast {
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
